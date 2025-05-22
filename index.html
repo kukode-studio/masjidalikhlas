@@ -109,6 +109,38 @@
             color: #666;
         }
     </style>
+
+    <!-- buat section kalo di scroll baru muncul -->
+    <style>
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        /* buat efek scroll */
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    section.classList.add('visible');
+                }
+
+                else {
+                    section.classList.remove('visible');
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -220,8 +252,10 @@
                 });
             });
         </script>
-        <p>📸 Galeri foto oleh @masjid_alikhlas</p>
-        <button class="btn btn-primary">Lihat Selengkapnya</button>
+        <p>📸 Galeri foto oleh <a href="https://www.instagram.com/alikhlas_sanggrahan/">@masjid_alikhlas</a></p>
+        <button class="btn btn-primary"
+            onclick="window.open('https://www.instagram.com/alikhlas_sanggrahan/', '_blank')">Lihat
+            Instagram</button>
     </section>
 
     <section class="section" id="lokasi-akses">
@@ -229,7 +263,7 @@
         <p>📍 Jl. Jl. Randu, Sanggrahan, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
             <br> 🚘 Parkir luas & aman <br> 🚌 Mudah dijangkau
         </p>
-        <a class="btn btn-primary" href="https://g.co/kgs/fmeHRo7">Buka di Google Maps</a>
+        <a class="btn btn-primary" href="https://maps.app.goo.gl/NVahPvg6SL9yhbQaA">Buka di Google Maps</a>
     </section>
 
     <section class="section">
