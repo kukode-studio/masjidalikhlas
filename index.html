@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- buat og image dan favivon nya -->
     <meta property="og:image" content="https://masjidalikhlas.vercel.app/og-image.png" />
-    <meta property="og:title" content="Masjid Al-Ikhlas" />
+    <meta property="og:title" content="Masjid Al-Ikhlas Sanggrahan" />
     <meta property="og:description" content="Masjid Al-Ikhlas – pusat ibadah, pembelajaran, dan silaturahmi." />
     <meta property="og:url" content="https://masjidalikhlas.vercel.app" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -116,8 +116,12 @@
         <div class="content">
             <h1>Mendekatkan Diri, Menyatukan Hati</h1>
             <p>Masjid Al-Ikhlas – pusat ibadah, pembelajaran, dan silaturahmi.</p>
-            <button class="btn btn-primary">🗓 Jadwal Sholat</button>
-            <button class="btn">📍 Kunjungi Kami</button>
+            <button class="btn btn-primary"
+                onclick="document.querySelector('.section').scrollIntoView({ behavior: 'smooth' });">🗓 Jadwal
+                Sholat</button>
+            <button class="btn"
+                onclick="document.getElementById('lokasi-akses').scrollIntoView({ behavior: 'smooth' });">📍 Kunjungi
+                Kami</button>
         </div>
     </header>
 
@@ -145,6 +149,16 @@
 
         <button class="btn btn-primary">Lihat Selengkapnya</button>
 
+    </section>
+
+    <!-- buat section jadwal imam sholat jumat -->
+    <section class="section">
+        <h2>Jadwal Imam Sholat Jumat</h2>
+        <p>InsyaaAllah akan dipimpin oleh<br> <b>Ust.Drs.H.Gampang Sagimin</b></p>
+        <!-- jadwal imam sholat jumat, bukan dari api. cukup img-->
+        <img src="imam.webp" alt="Jadwal Imam Sholat Jumat" style="width: 100%; max-width: 600px; border-radius: 1rem;">
+        <p>🗓 Hari Jumat <br> ⏰ 12:00 - 13:00 <br> 📍 Masjid Al-Ikhlas</p>
+        <button class="btn btn-primary">Yuk Hadir</button>
     </section>
 
     <section class="section">
@@ -207,7 +221,7 @@
         <button class="btn btn-primary">Lihat Selengkapnya</button>
     </section>
 
-    <section class="section">
+    <section class="section" id="lokasi-akses">
         <h2>Lokasi & Akses</h2>
         <p>📍 Jl. Jl. Randu, Sanggrahan, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
             <br> 🚘 Parkir luas & aman <br> 🚌 Mudah dijangkau
